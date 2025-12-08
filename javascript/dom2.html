@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 900px;
+            height: 700px;
+            background-color: aquamarine;
+            margin-top: 40px;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .rectangle{
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .square{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="shapeName" id="shapename" placeholder="Which shape do you want?">
+    <input type="number" name="quantity" id="quantity" placeholder="How many?">
+    <input type="color" name="shapecolor" id="shapecolor" placeholder="Which color?">
+    <button id="generate">Generate</button>
+    <div class="container"></div>
+    <script>
+        let generate = document.querySelector("#generate");
+        generate.addEventListener("click",()=>{
+            let shape = document.querySelector("#shapename").value;
+            let quantity = document.querySelector("#quantity").value;
+            let color= document.querySelector("#shapecolor").value;
+            let container = document.querySelector(".container")
+            container.innerHTML = '';
+            for (let i=1; i<=quantity; i++){
+                let figure = document.createElement("div");
+                figure.classList.add(shape);
+                figure.style.backgroundColor=color;
+                container.appendChild(figure);
+            }
+        })
+    </script>
+</body>
+</html>

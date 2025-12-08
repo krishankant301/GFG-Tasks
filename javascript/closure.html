@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 0.5rem;
+            height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>closure</h1>
+
+    <script>
+        function outer(){
+            let value =10;
+            function inner(){
+                console.log(value);
+            }
+            return inner;
+        }
+        let res = outer();
+        res();
+    </script> -->
+
+    <h1>Two button problem</h1>
+    <button id="red">Red</button>
+    <button id="green">green</button>
+    <script>
+        document.getElementById("red").onclick = HandleClick("red");
+        document.getElementById("green").onclick = HandleClick("green");
+        function HandleClick(color){
+            return funtion(){
+                document.body.style.backgroundColor = color;
+            }
+        }
+    </script>
+</body>
+</html>

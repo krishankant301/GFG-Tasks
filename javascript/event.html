@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandparent{
+            width: 1000px;
+            height: 800px;
+            background-color: red;
+        }
+        .parent{
+            width: 800px;
+            height: 600px;
+            background-color: blue;
+        }
+        .child{ 
+            width: 600px;
+            height: 400px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent">
+        grandparent
+        <div class="parent">
+            parent
+            <div class="child">child</div>
+        </div>
+    </div>
+    <p id="data"></p>
+    <script>
+        let grandparent = document.querySelector(".grandparent");
+        let parent = document.querySelector(".parent");
+        let child = document.querySelector(".child");
+
+        //click event
+        // grandparent.addEventListener("click", (event) =>{
+        //     console.log("Granparent was clicked.");
+        //     let data = document.getElementById("data");
+        //     data.innerText= event.target.className;
+        //     document.body.appendChild(data);
+        //     // console.log(event.target);
+        // });
+
+        //double click
+        // grandparent.addEventListener("dblclick", (event) =>{
+        //     console.log("Granparent was clicked.");
+        //     let data = document.getElementById("data");
+        //     data.innerText= event.target.className;
+        //     document.body.appendChild(data);
+        // });
+
+        //mousemove
+        // grandparent.addEventListener("mousemove", (event) =>{
+        //     console.log("Granparent was clicked.");
+        //     let data = document.getElementById("data");
+        //     data.innerText= event.target.className;
+        //     document.body.appendChild(data);
+        // });
+
+
+        //mouseover
+        // grandparent.addEventListener("mouseover", (event) =>{
+        //     console.log("Granparent was clicked.");
+        //     let data = document.getElementById("data");
+        //     data.innerText= event.target.className;
+        //     document.body.appendChild(data);
+        // });
+
+        
+        //mouseout
+        // grandparent.addEventListener("mouseout", (event) =>{
+        //     console.log("Granparent was clicked.");
+        //     let data = document.getElementById("data");
+        //     data.innerText= event.target.className;
+        //     document.body.appendChild(data);
+        // });
+
+
+        //keydown
+        grandparent.addEventListener("keydown", (event) =>{
+            console.log("Granparent was clicked.");
+            let data = document.getElementById("data");
+            data.innerText= event.target.className;
+            document.body.appendChild(data);
+        });
+
+
+        // parent.addEventListener("click", () =>{
+        //     console.log("Parent was clicked.");
+        // });
+        // child.addEventListener("click", () =>{
+        //     console.log("Child was clicked.");
+        // });
+    </script>
+</body>
+</html>

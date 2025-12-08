@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promise</h1>
+    <script>
+        // fetch("https://dummyjson.com/product").then((data)=>{
+        //     console.log("Successfull");
+        //     console.log(data);
+        // }).catch((err)=>{
+        //     console.log("Promise failed");
+        //     console.log(`Error: ${err}`);
+        // }).finally(()=>{
+        //     console.log("Promise is finished");
+        // })
+        let response = fetch("https://dummyjson.com/product");
+        console.log(response);
+//         let promise1 = new Promise((resolve,reject)=>{
+//     setTimeout(() => {
+//           resolve("Success");
+//     }, 2000);
+// })
+// console.log(promise1);
+    </script>
+</body>
+</html>
