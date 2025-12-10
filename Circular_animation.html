@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 700px;
+            height:600px;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .ball{
+            width: 120px;
+            height: 120px;
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: jump;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes jump {
+            0%{
+                transform: translate(0px,0px);
+            }
+            10%{
+                transform: translate(-20px,-20px);
+            }
+            20%{
+                transform: translate(-40px,-40px);
+                background-color: aqua;
+            }
+            25%{
+                transform: translate(-50px,-50px);
+            }
+            30%{
+                transform: translate(-40px,-60px);
+            }
+            40%{
+                transform: translate(-20px,-80px);
+                background-color: rgb(86, 250, 157);
+            }
+            50%{
+                transform: translate(0px,-100px);
+            }
+            60%{
+                transform: translate(20px,-80px);
+                background-color: rgb(203, 49, 185);
+
+            }
+            70%{
+                transform: translate(40px,-60px);
+            }
+            75%{
+                transform: translate(50px,-50px);
+            }
+            80%{
+                transform: translate(40px,-40px);
+                background-color: rgb(201, 207, 24);
+            }
+            90%{
+                transform: translate(20px,-20px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball">IND vs WI</div>
+    </div>
+</body>
+</html>
